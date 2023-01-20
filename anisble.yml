@@ -1,0 +1,9 @@
+---
+- hosts : all
+  become : true 
+  tasks :
+    - name : copying war file from ansible to webapps folder 
+      copy : 
+        src : opt/artifact/target/project-3-1.0-SNAPSHOT.war
+        dest : /opt/apache-tomcat-9.0.71/webapps
+        
